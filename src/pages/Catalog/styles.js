@@ -9,7 +9,6 @@ const Container = styled.div`
     text-align:center
     margin-top: 8rem;
 
-
     .topBar{
         background: black;
         display: flex;
@@ -51,7 +50,7 @@ const Container = styled.div`
         flex-direction: column;
 
         h2{
-            margin-top: 8rem;
+            margin-top: 2rem;
             text-align: center;
         }
     
@@ -66,9 +65,9 @@ const Container = styled.div`
             color: gray;
             text-align: center;
         }
-        
-        Link{
-            display-wrap: wrap;
+
+        cardsPlace{
+            
         }
     }
 
