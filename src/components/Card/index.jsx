@@ -1,20 +1,35 @@
 import {Card} from './styles';
 import Button from '../Buttons';
 
-const ProductCard = ({ name, first_brewed, description, volume, click }) => {
+const ProductCard = ({ id, 
+                        name, 
+                        image, 
+                        first_brewed, 
+                        description, 
+                        volume, 
+                        descriptionTag,
+                        setDescriptionTag, 
+                        click,
+                        click1,
+                        click2,
+                        click3,
+                        click4 }) => {
+
     return (
         <Card>
-            <div>
-                <img src="https://images.punkapi.com/v2/2.png" alt="" width="50" height="150" />
+
+            <div className={descriptionTag}>{description}</div>
+
+            <div className="ownCard">
+                <img src={image} alt="" width="50" height="150" />
                 <p>{name}</p>
                 <hr />
                 <p>Brewed since: {first_brewed}</p>
-                {/* <p>{description}</p> */}
                 <p>{volume.value} {volume.unit}</p>
                 <Button setColor={'gray'}
                         setSize={'medium'}
                         setFontColor={"white"}
-                        click={click}
+                        click={click1}
                         >Description</Button>
                 <Button setColor={'red'}
                         setSize={'medium'}
@@ -27,21 +42,21 @@ const ProductCard = ({ name, first_brewed, description, volume, click }) => {
                         setColor={'black'}
                         setSize={'medium'}
                         setFontColor={"white"}
-                        click={click}
+                        click={click2}
                     >Confra</Button>
 
                     <Button
                         setColor={'black'}
                         setSize={'medium'}
                         setFontColor={"white"}
-                        click={click}
+                        click={click3}
                     >Prom</Button>
 
                     <Button
                         setColor={'black'}
                         setSize={'medium'}
                         setFontColor={"white"}
-                        click={click}
+                        click={click4}
                     >Wedding</Button>
                 </div>
             </div>

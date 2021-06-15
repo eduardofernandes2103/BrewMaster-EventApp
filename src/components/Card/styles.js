@@ -10,4 +10,13 @@ export const Card = styled.div`
     heigth: 5rem;
     transition: 0.5s;
     margin: 0.5rem;
+
+    .description{
+        display: none;
+    }
+
+    .descriptionOn{
+        display: flex;
+        color: gray;
+    }
     `

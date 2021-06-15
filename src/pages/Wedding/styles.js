@@ -66,8 +66,12 @@ const Container = styled.div`
             text-align: center;
         }
 
-        cardsPlace{
-            
+        .cardsPlace{
+            text-align: center;
+            display: flex;
+            flex-direction: Column;
+            align-items: center;
+            justify-contents: center;   
         }
     }
 
