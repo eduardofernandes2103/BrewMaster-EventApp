@@ -21,6 +21,29 @@ const ProductCard = ({ name, first_brewed, description, volume, click }) => {
                         setFontColor={"white"}
                         click={click}
                         >Apagar</Button>
+                <div>
+                    
+                    <Button
+                        setColor={'black'}
+                        setSize={'medium'}
+                        setFontColor={"white"}
+                        click={click}
+                    >Confra</Button>
+
+                    <Button
+                        setColor={'black'}
+                        setSize={'medium'}
+                        setFontColor={"white"}
+                        click={click}
+                    >Prom</Button>
+
+                    <Button
+                        setColor={'black'}
+                        setSize={'medium'}
+                        setFontColor={"white"}
+                        click={click}
+                    >Wedding</Button>
+                </div>
             </div>
         </Card>
     )

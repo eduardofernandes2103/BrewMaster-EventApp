@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Container from './styles'
 import { IoIosBeer } from 'react-icons/io'
+import ProductCard from "../../components/Card"
 
 
 const Catalog = () => {
@@ -31,7 +32,51 @@ const Catalog = () => {
                 <h2>If you Wanna Add some beer to your event, choose the event and click on Add Button.</h2>
                 
                 <div className="cardsPlace">
-                    Aqui vão ficar os cards
+                    
+                    <ProductCard 
+                        name="Burbank IPA"
+                        first_brewed= "09/2007"
+                        volume={
+                            {
+                                "value": 0.6,
+                                "unit": "litres"
+                            }
+                        }
+                    />
+
+                    <ProductCard 
+                        name="Burbank APA"
+                        first_brewed= "09/2007"
+                        volume={
+                            {
+                                "value": 0.6,
+                                "unit": "litres"
+                            }
+                        }
+                    />
+                    
+                    <ProductCard 
+                        name="Burbank NEIPA"
+                        first_brewed= "09/2007"
+                        volume={
+                            {
+                                "value": 0.6,
+                                "unit": "litres"
+                            }
+                        }
+                    />
+                    
+                    <ProductCard 
+                        name="Burbank Stout"
+                        first_brewed= "09/2007"
+                        volume={
+                            {
+                                "value": 0.6,
+                                "unit": "litres"
+                            }
+                        }
+                    />
+                    
                 </div>
 
             </div>
