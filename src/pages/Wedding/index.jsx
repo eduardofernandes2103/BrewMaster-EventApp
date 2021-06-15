@@ -8,7 +8,7 @@ import { useState } from 'react'
 
 const Wedding = () => {
 
-    const { wedding, addToConfraternization, addToProm, addToWedding } = useCart()
+    const { wedding, addToConfraternization, addToProm, addToWedding, removeToWedding } = useCart()
 
     const [descriptionTag, setDescriptionTag] = useState("description")
     
@@ -52,6 +52,7 @@ const Wedding = () => {
                                 description={product.description}
                                 descriptionTag={descriptionTag}
                                 setDescriptionTag={setDescriptionTag}
+                                click={() => removeToWedding(product)}
                                 click1={() => handleDescription()}
                                 click2={() => addToConfraternization(product)}
                                 click3={() => addToProm(product)}

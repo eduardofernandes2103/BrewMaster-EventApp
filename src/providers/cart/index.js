@@ -33,6 +33,18 @@ const CartContext = createContext();
         setWedding([...wedding, product])
     }
 
+    const removeToConfraternization = (product) => {
+        setConfraternization(confraternization.filter((element) => element.id !== product.id))
+    }
+
+    const removeToProm = (product) => {
+        setProm(prom.filter((element) => element.id !== product.id))
+    }
+
+    const removeToWedding = (product) => {
+        setWedding(wedding.filter((element) => element.id !== product.id))
+    }
+
     useEffect (() => {
         loadCatalog()
         console.log(menu)
@@ -52,6 +64,9 @@ const CartContext = createContext();
                                         addToConfraternization,
                                         addToProm,
                                         addToWedding,
+                                        removeToConfraternization,
+                                        removeToProm,
+                                        removeToWedding,
                                         loadCatalog                                         
                                         }}
         > 

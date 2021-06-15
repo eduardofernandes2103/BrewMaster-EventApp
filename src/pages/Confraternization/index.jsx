@@ -8,7 +8,12 @@ import { useState } from 'react'
 
 const Confraternization = () => {
     
-    const { confraternization, addToConfraternization, addToProm, addToWedding } = useCart()
+    const { confraternization,
+            addToConfraternization, 
+            addToProm, 
+            addToWedding, 
+            removeToConfraternization 
+        } = useCart()
 
     const [descriptionTag, setDescriptionTag] = useState("description")
     
@@ -52,6 +57,7 @@ const Confraternization = () => {
                                 description={product.description}
                                 descriptionTag={descriptionTag}
                                 setDescriptionTag={setDescriptionTag}
+                                click={() => removeToConfraternization(product)}
                                 click1={() => handleDescription()}
                                 click2={() => addToConfraternization(product)}
                                 click3={() => addToProm(product)}
