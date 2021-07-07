@@ -3,17 +3,24 @@ import Container from './styles'
 import { IoIosBeer } from 'react-icons/io'
 import ProductCard from "../../components/Card"
 import { useState, useEffect } from 'react'
-// import api from '../../services/api'
 import { useCart } from '../../providers/cart';
+import { toast } from 'react-toastify'
+import {ToastContainer}  from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Catalog = () => {
-    // const [menu, setMenu] = useState([]);
     const [descriptionTag, setDescriptionTag] = useState("description")
     
     const handleDescription = () => {
         descriptionTag === "description" 
         ? setDescriptionTag("descriptionOn") 
         : setDescriptionTag("description")
+    }
+
+    const handleNotRemove = () => {
+        toast.error('It is not possible to remove from the Catalog')
     }
 
     const { 
@@ -27,11 +34,12 @@ const Catalog = () => {
 
     useEffect (() => {
         loadCatalog()
-        console.log(menu)
     }, []);    
 
     return (
         <Container>
+
+            <ToastContainer />
 
             <div className="topBar">
                 
@@ -66,6 +74,7 @@ const Catalog = () => {
                                 description={product.description}
                                 descriptionTag={descriptionTag}
                                 setDescriptionTag={setDescriptionTag}
+                                click={() => handleNotRemove()}
                                 click1={() => handleDescription()}
                                 click2={() => addToConfraternization(product)}
                                 click3={() => addToProm(product)}

@@ -4,6 +4,8 @@ import { IoIosBeer } from 'react-icons/io'
 import ProductCard from '../../components/Card'
 import { useCart } from '../../providers/cart';
 import { useState } from 'react'
+import {ToastContainer}  from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Wedding = () => {
@@ -21,6 +23,8 @@ const Wedding = () => {
     return (
 
         <Container>
+
+            <ToastContainer />
 
             <div className="topBar">
                 

@@ -1,6 +1,9 @@
 import { createContext, useContext } from "react";
 import { useState, useEffect } from "react";
 import api from '../../services/api'
+import {toast}  from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const CartContext = createContext();
 
@@ -20,34 +23,37 @@ const CartContext = createContext();
     }
 
     const addToConfraternization = (product) => {
-        console.log(product)
         setConfraternization([...confraternization, product])
-        console.log("teste")
+        toast.success('Add to Confraternization')
     }
 
     const addToProm = (product) => {
         setProm([...prom, product])
+        toast.success('Add to Prom')
     }
 
     const addToWedding = (product) => {
         setWedding([...wedding, product])
+        toast.success('Add to Wedding')
     }
 
     const removeToConfraternization = (product) => {
         setConfraternization(confraternization.filter((element) => element.id !== product.id))
+        toast.error('Remove Beer from Confraternization')
     }
 
     const removeToProm = (product) => {
         setProm(prom.filter((element) => element.id !== product.id))
+        toast.error('Remove Beer from Prom')
     }
 
     const removeToWedding = (product) => {
         setWedding(wedding.filter((element) => element.id !== product.id))
+        toast.error('Remove Beer from Wedding')
     }
 
     useEffect (() => {
         loadCatalog()
-        console.log(menu)
     }, []);
 
    return (
